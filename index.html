@@ -1,0 +1,72 @@
+<!DOCTYPE HTML><!--  lo  que hace es definir que se usa html5 -->
+<html lang="es"><!-- lang es un atributo que define el lenguaje-->
+<head>
+	<meta charset="utf-8"/><!-- para que el navegador entienda el encoder-->
+	<meta description="Proyecto Web"/><!-- Descripción que hace cada url-->
+	<title>El título de la página</title>
+</head>
+<body>
+	
+	<header>
+		<figure id="logo"><!-- El id se usa para elementos irrepetibles-->
+			<img src="./images/logo.png"/>
+		</figure>
+		<h1>
+			Pruebas diseño web
+		</h1>
+		<figure id="avatar"><!--La etiquetafigurase utiliza para imagens-->
+			<img src="./images/avatar.jpg"/>
+		</figure>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#">Python</a></li><!-- li es etiqueta paras listas-->
+			<li><a href="#">HTML5</a></li><!-- a es para referencia-->
+			<li><a href="#">Javascript</a></li>
+			<li><a href="#">CSS3</a></li>
+			<li><a href="#">Django</a></li>
+			<li id="publicar_nav">
+				<a href="#">Publicar</a>
+			</li>
+		</ul>
+	</nav>
+	
+	<section id="contenido">
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="./images/imagen.jpg"/>
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">Título del artículo</a>
+			</h2>
+			<div class="autor_item">
+				por <a href="#"> Skar </a>
+			</div>
+			<div class="datos_item">
+				<a href="#" class="tag_item">algo</a>
+				<span class="fecha_item">
+					hace <strong>5</strong> min
+				</span>
+				<a href="#" class="comentarios_item">69</a>
+				<a href="#" class="guardar_item"></a>
+			</div>
+			<div class="votacion">
+				<a href="#" class="up"></a>
+				499
+				<a href="#" class="down"></a>
+			</div>
+		</article>
+	</section>
+	
+	<footer>
+		<P>
+			<strong>Powered by Skar</strong>
+		</P>
+		<p>
+			02/07/2015
+		</p>
+	
+	</footer>
+</body>
+</html>

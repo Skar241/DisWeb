@@ -2,8 +2,10 @@
 <html lang="es"><!-- lang es un atributo que define el lenguaje-->
 <head>
 	<meta charset="utf-8"/><!-- para que el navegador entienda el encoder-->
-	<meta description="Proyecto Web"/><!-- Descripción que hace cada url-->
+	<meta name="description" content="Proyecto Web"/><!-- Descripción que hace cada url-->
 	<title>El título de la página</title>
+	<link rel="stylesheet" href="./normalize.css"/><!-- linkeamos el archivo-->
+	<link rel="stylesheet" href="./estilos.css"/>
 </head>
 <body>
 	
@@ -32,41 +34,40 @@
 		</ul>
 	</nav>
 	
-	<section id="contenido">
-		<article class="item">
+	<section id="contenido"><!-- Section es un contenedor (Cuadro grande)-->
+		<article class="item"><!-- article es un contenedor más pequeño-->
 			<figure class="imagen_item">
 				<img src="./images/imagen.jpg"/>
 			</figure>
 			<h2 class="titulo_item">
 				<a href="#">Título del artículo</a>
 			</h2>
-			<div class="autor_item">
+			<div class="autor_item"><!--Div es la etiqueta para tabla-->
 				por <a href="#"> Skar </a>
 			</div>
 			<div class="datos_item">
 				<a href="#" class="tag_item">algo</a>
-				<span class="fecha_item">
+				<span class="fecha_item"><!-- Es una etiqueta que me permite colocarle estilos a un texto sin volverlo caja-->
 					hace <strong>5</strong> min
 				</span>
-				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item"></a>
 			</div>
 			<div class="votacion">
 				<a href="#" class="up"></a>
 				499
 				<a href="#" class="down"></a>
+				<a href="#" class="comentarios_item">69</a>
+				<a href="#" class="guardar_item"></a>
 			</div>
 		</article>
 	</section>
 	
 	<footer>
-		<P>
-			<strong>Powered by Skar</strong>
+		<P><!-- La diferencia entre p y div es que p tiene margen superior e inferior ya que es un parrafo-->
+			<strong>Powered by Skar</strong><!--Etiqueta para subrayar-->
 		</P>
 		<p>
 			02/07/2015
 		</p>
-	
 	</footer>
 </body>
 </html>

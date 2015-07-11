@@ -3,7 +3,9 @@
 <head>
 	<meta charset="utf-8"/><!-- para que el navegador entienda el encoder-->
 	<meta name="description" content="Proyecto Web"/><!-- Descripción que hace cada url-->
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/><!--Para hacer el tamaño respectivo al dispositivo y que no haya zoom-->
 	<title>El título de la página</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'><!-- Agregamos fuente de letra sacada de google fonts-->
 	<link rel="stylesheet" href="./normalize.css"/><!-- linkeamos el archivo-->
 	<link rel="stylesheet" href="./estilos.css"/>
 </head>
@@ -29,11 +31,20 @@
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
 			<li id="publicar_nav">
-				<a href="#">Publicar</a>
+				<a href="#" class="icon-pen">Publicar</a>
 			</li>
 		</ul>
 	</nav>
-	
+
+	<aside><!--quitamos importancia a lo que este dentro de este-->
+		
+		<video width="320" heigth="240" autoplay controls>
+			<source src="lecturas.mp4" type="video/mp4">
+			<source src="lecturas.ogg" type="video/mp4">
+		</video>
+
+	</aside>
+
 	<section id="contenido"><!-- Section es un contenedor (Cuadro grande)-->
 		<article class="item"><!-- article es un contenedor más pequeño-->
 			<figure class="imagen_item">
@@ -52,13 +63,39 @@
 				</span>
 			</div>
 			<div class="votacion">
-				<a href="#" class="up"></a>
+				<a href="#" class="up icon-arrow-up2"></a>
 				499
-				<a href="#" class="down"></a>
+				<a href="#" class="down icon-arrow-down2"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item"></a>
+				<a href="#" class="guardar_item icon-star-empty"></a>
 			</div>
 		</article>
+
+		<article class="item"><!-- article es un contenedor más pequeño-->
+			<figure class="imagen_item">
+				<img src="./images/imagen.jpg"/>
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">Título del artículo</a>
+			</h2>
+			<div class="autor_item"><!--Div es la etiqueta para tabla-->
+				por <a href="#"> Skar </a>
+			</div>
+			<div class="datos_item">
+				<a href="#" class="tag_item">algo</a>
+				<span class="fecha_item"><!-- Es una etiqueta que me permite colocarle estilos a un texto sin volverlo caja-->
+					hace <strong>5</strong> min
+				</span>
+			</div>
+			<div class="votacion">
+				<a href="#" class="up icon-arrow-up2"></a>
+				499
+				<a href="#" class="down icon-arrow-down2"></a>
+				<a href="#" class="comentarios_item">69</a>
+				<a href="#" class="guardar_item icon-star-empty"></a>
+			</div>
+		</article>
+		
 	</section>
 	
 	<footer>

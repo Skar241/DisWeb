@@ -1,10 +1,55 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?8h6wzd');
+	src:url('fonts/icomoon.eot?#iefix8h6wzd') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?8h6wzd') format('truetype'),
+		url('fonts/icomoon.woff?8h6wzd') format('woff'),
+		url('fonts/icomoon.svg?8h6wzd#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pen:before {
+	content: "\e908";
+	margin-right: 0.8em;
+}
+.icon-star-empty:before {
+	content: "\e9d7";
+	color: #FFBE2C;
+	margin-right: 0.4em;
+	position: relative;
+	top: 0.1em;
+}
+.icon-arrow-up2:before {
+	content: "\ea3a";
+}
+.icon-arrow-down2:before {
+	content: "\ea3e";
+	color: #DD4F24;
+}
+/*Lo anterior es para agregar icon fonts*/
+/*Fuentes usadas en local svg iphone-ipad, eot explorer viejo, woff opera*/
 a{
 	color: #22BCE0;
 }
 
 body{
 	background: #EEEEEE;
-	font-family: "Arial";
+	font-family: "Open Sans";/*Fuente traida desde google fonts*/
 	font-size: 16px;
 }
 
@@ -62,16 +107,25 @@ header #avatar img{
 	width: 55px;
 }
 
+header #logo{
+	-border-right: 1px solid white;/*Se agrega el borde lateral*/
+	margin-right: 0.5em;
+}
+
 header #logo img{
-	border-right: 1px solid white;/*Se agrega el borde lateral*/
 	padding-right: 0.5em;
 	margin-right: 0.5em;
 	width: 52px;
+	-webkit-transition:.5s;/*damos tiempo de transicion*/
+}
+
+header #logo img:hover{
+	-webkit-transform:rotate(360deg);/*para que gire 360 cuando se posicionen sobre él*/
 }
 
 nav{
 	background: #80BCA3;
-	padding: 0 0.5em;
+	padding: 0 6em 0 0;
 	position: relative;/*Mayor gerarquía de posiciones*/
 }
 
@@ -91,10 +145,24 @@ nav ul #publicar_nav a{
 	background: #22BCE0;
 	border-radius: 5px;
 	box-shadow: rgba(0,0,0,0.5) 2px 2px 20px; /*(color) (x) (y) (difuminación)*/
-	padding: 0.8em 0.5em;/*margen del botón*/
+	padding: 0.8em 0.5em 0.8em 2.5em;/*margen del botón*/
 	text-decoration: none;/*quitamos la decoración por defecto*/
 	font-style: italic;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px; /*(color) (x) (y) (difuminación)*/
+}
+
+nav ul #publicar_nav a:before{/*para centrar el lapíz*/
+	position: absolute;
+	left: .5em;
+	top: .7em;
+}
+
+nav ul #publicar_nav a:hover:before{
+	font-size: 20px;
+}
+
+nav ul li a:hover{
+	background: #343B54;
 }
 
 nav ul li{
@@ -105,7 +173,12 @@ nav ul li{
 nav ul li a{
 	color: white;
 	display: block;/*Agregamos una caja para que pueda tener padding*/
-	padding: 0.5em 0;/*hacemos que toda el área de la etiqueta se vuelva clikeable*/
+	padding: 0.5em;/*hacemos que toda el área de la etiqueta se vuelva clikeable*/
+	-webkit-transition:.3s;
+}
+
+video{
+	display: none;/*ocultamos el video*/
 }
 
 #contenido{
@@ -131,6 +204,7 @@ nav ul li a{
 
 #contenido .item .datos_item .fecha_item{
 	color: #AAA;
+	margin-right: 1em;/*Recorremos un poco el tiempo*/
 }
 
 #contenido .item .datos_item .tag_item{
@@ -169,12 +243,52 @@ nav ul li a{
 	position: absolute;
 	top: 100%;
 	width: 90%;
-	left: 10%;
+	left: 5%;
 	margin-top: 3px;
 	padding: 0.2 0.5em; 
+}
+
+#contenido .item .votacion a{
+	text-decoration: none;
 }
 
 #contenido .item .votacion .comentarios_item,
 #contenido .item .votacion .guardar_item{
 	float: right;
+}
+
+/*Actuara cuando se mande a imprimir
+@media print{
+	body{
+		font-size: 50px;
+	}
+}*/
+/*Media Querys*/
+@media screen and (min-width: 800px){/*esto se va a ejecutar cuando la pantalla sea mayor o igual a 800 pixeles*/
+	
+	#contenido{
+		overflow: hidden;
+	}
+
+	#contenido .item{/*Colocamos el contenido a dos columnas*/
+		width: 49%;
+		float: left;
+	}
+
+	#contenido .item:nth-child(odd){/*Seleccionamos los hijos izquierdos*/
+		margin-right: 2%;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	aside{
+		display: block;
+		float: right;
+		margin: 1em;
+		width: 20%;/*20% de mi pagina*/
+	}
+
+	aside video{
+		width: 100%;/*del aside*/
+	}
 }

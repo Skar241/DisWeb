@@ -47,6 +47,10 @@ a{
 	color: #22BCE0;
 }
 
+aside{
+	display: none;
+}
+
 body{
 	background: #EEEEEE;
 	font-family: "Open Sans";/*Fuente traida desde google fonts*/
@@ -285,7 +289,7 @@ video{
 		display: block;
 		float: right;
 		margin: 1em;
-		width: 20%;/*20% de mi pagina*/
+		width: 25%;/*20% de mi pagina*/
 	}
 
 	aside video{

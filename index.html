@@ -8,6 +8,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'><!-- Agregamos fuente de letra sacada de google fonts-->
 	<link rel="stylesheet" href="./normalize.css"/><!-- linkeamos el archivo-->
 	<link rel="stylesheet" href="./estilos.css"/>
+	<script src="prefixfree.js"></script>
 </head>
 <body>
 	
@@ -31,7 +32,7 @@
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
 			<li id="publicar_nav">
-				<a href="#" class="icon-pen">Publicar</a>
+				<a href="#" class="icon-pen" id="mostrar-form">Publicar</a>
 			</li>
 		</ul>
 	</nav>
@@ -112,5 +113,8 @@
 			02/07/2015
 		</p>
 	</footer>
+	<!-- se agregan funcionalidades de jQuery -->
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="formulario.js"></script>
 </body>
 </html>

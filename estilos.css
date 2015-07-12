@@ -180,10 +180,10 @@ nav ul li a{
 	padding: 0.5em;/*hacemos que toda el área de la etiqueta se vuelva clikeable*/
 	-webkit-transition:.3s;
 }
-
+/*
 video{
 	display: none;/*ocultamos el video*/
-}
+/*}*/
 
 #contenido{
 	margin: 1em;

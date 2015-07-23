@@ -5,7 +5,6 @@
 	<meta name="description" content="Proyecto Web"/><!-- Descripción que hace cada url-->
 	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/><!--Para hacer el tamaño respectivo al dispositivo y que no haya zoom-->
 	<title>El título de la página</title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'><!-- Agregamos fuente de letra sacada de google fonts-->
 	<link rel="stylesheet" href="./normalize.css"/><!-- linkeamos el archivo-->
 	<link rel="stylesheet" href="./estilos.css"/>
 	<script src="prefixfree.js"></script>
@@ -116,5 +115,14 @@
 	<!-- se agregan funcionalidades de jQuery -->
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="formulario.js"></script>
+	<script>
+		/*window.onload = function(){
+			console.log("Ya se disparó el evento Onload");
+		}*/
+
+		$(function(){
+			console.log("Ya se disparó el evento DOMContentLoad");
+		});
+	</script>
 </body>
 </html>

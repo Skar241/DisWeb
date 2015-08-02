@@ -10,7 +10,8 @@ function geo_exito(posicion){
 	var lat = posicion.coords.latitude;
 	var lon = posicion.coords.longitude;
 	var mapa = new Image();
-	mapa.src = "http://maps.googleapis.com/maps/api/staticmap?zoom=13&size=300x300&sensor=false&center="+lat+","+lon;
+	mapa.src = "http://maps.googleapis.com/maps/api/staticmap?zoom=13&size=300x300&sensor=false&center="+lat+","+lon;//obtenemos la imagen de nuestra posición actual
+	//le podemos indicar el zoom, el tamanio
 	$('#geo').append(mapa);
 
 	obtenerGeoInformacion(lat, lon);

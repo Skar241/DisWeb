@@ -24,13 +24,14 @@ texto = JSON.stringify(obj_texto)
 "{"nombre":"oscar","apellido":"diaz"}"
 */
 
-function mostrarFormulario(){
+function mostrarFormulario(evento){
+	evento.preventDefault();//para que no recargue la página
 	$form.slideToggle();/// a medida que el usauario da click lo va guardando o lo va ocultando
 	$list.slideToggle();
-	return false;//para que no recargue la página
 }
 
-function agregarPost(){
+function agregarPost(evento){
+	evento.preventDefault();//para que no recargue la página
 	var url = $url.val();
 	var titulo = $titulo.val();
 	var $clone = $post.clone();//clonamos el post
